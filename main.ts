@@ -757,7 +757,7 @@ function initializeScene () {
 . . . . . . . . . . . . . . . . 
 `, false)
     scene.setTile(6, img`
-d d d d d d d d d d b d d d d d 
+d . . d d d d d d . b d d . . d 
 d d d d d d d d d b d d d d d d 
 d d d d d d d d d b d d d d b d 
 d d d b b d d d d d d d d d b d 
@@ -777,20 +777,20 @@ d d d d d d d d d b d d d d b d
     // rock
     scene.setTile(7, img`
 f f f f f f f f f f f f f f f f 
-f f 2 2 2 2 2 2 2 f 2 2 2 2 f f 
-f 2 2 2 2 2 2 2 2 f 2 2 2 2 2 f 
-f 2 2 2 2 2 2 2 2 f 2 2 2 2 2 f 
-f 2 2 2 2 2 2 2 2 f 2 2 2 2 2 f 
+f f b b b b b b b f b b b b f f 
+f b b b b b b b b f b b b b b f 
+f b b b b b b b b f b b b b b f 
+f f b b b b b b b f b b b b b f 
 f f f f f f f f f f f f f f f f 
-f 2 2 2 2 f 2 2 2 2 2 2 2 2 2 f 
-f 2 2 2 2 f 2 2 2 2 4 4 2 2 2 f 
-f 2 2 2 2 f 2 2 2 4 4 2 2 2 2 f 
-f 2 2 2 2 f 2 2 2 2 2 2 2 2 2 f 
+f f f f b f b b b b b b b b b f 
+f f f b b f b b b b a a b b b f 
+f b f b b f b b b a a b b b b f 
+f b b b b f b b b b b b b b b f 
 f f f f f f f f f f f f f f f f 
-f 2 2 2 2 2 2 2 2 f 2 2 2 2 2 f 
-f 2 2 2 4 2 2 2 2 f 2 2 2 2 2 f 
-f 2 2 4 2 2 2 2 2 f 2 2 2 2 2 f 
-f f 2 2 2 2 2 2 2 f 2 2 2 2 f f 
+f b b b b b b b b f b b b b b f 
+f b b b a b b b b f b b f f f f 
+f b b a b b b b b f b b b f f f 
+f f b b b b b b b f b b f f f f 
 f f f f f f f f f f f f f f f f 
 `, true)
     scene.setTile(8, img`
@@ -922,7 +922,7 @@ f f f f f f f f f f f f f f f f
 `, false)
     // ground1
     scene.setTile(15, img`
-d d d d d d d d d d b d d d d d 
+d . d d . . d d d d b d . d . d 
 d d d d d d d d d b d d d d d d 
 d d d d d d d d d b d d d d b d 
 d d d b b d d d d d d d d d b d 
@@ -1246,19 +1246,19 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Flier, function (sprite, otherSp
 })
 function spawnGoals () {
     scene.placeOnRandomTile(sprites.create(img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . f f f f . . . . . 
-. . . . . . f 2 2 2 2 f f . . . 
-. . . . . . f 2 3 3 2 2 2 f . . 
-. . . . . . f 2 3 2 2 2 2 2 f . 
-. . . . . . f 3 2 2 2 2 2 f . . 
-. . . . . . f 2 2 2 2 f f . . . 
-. . . . . . f b d f f . . . . . 
-. . . . . . f b d f . . . . . . 
-. . . . . . f b d f . . . . . . 
-. . . . . . f b d f . . . . . . 
-. . . . . . f b d f . . . . . . 
-. . . . . . f d d f . . . . . . 
+. . . . . . 1 1 1 1 . . . . . . 
+. . . . . 1 1 1 1 1 1 . . . . . 
+. . . . . f b 1 f b 1 . . . . . 
+. . . . . 1 1 1 1 1 1 . . . . . 
+. . . . 1 1 1 1 1 1 1 . . . . . 
+. . . . a 1 1 a 1 a 1 . . . . . 
+. . . . a a 1 a 2 2 . . . . . . 
+. . . . . . 2 2 2 2 . . . . . . 
+. . . . . . f 2 b 2 . . . . . . 
+. . . . . . f c 2 f . . . . . . 
+. . . . . . f 2 b f . . . . . . 
+. . . . . . f c b f . . . . . . 
+. . . . . . f c b f . . . . . . 
 . . . . . f f f f f f . . . . . 
 . . . . f f f f f f f f . . . . 
 . . . f f f f f f f f f f . . . 
